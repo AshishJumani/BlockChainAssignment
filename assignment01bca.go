@@ -2,6 +2,10 @@
 
 package main
 
+// import (
+//     a1 "github.com/AshishJumani/assignment01bca"
+// )
+
 import (
 	"crypto/sha256"
 	"errors"
@@ -84,7 +88,7 @@ func main() {
 	}
 	Blockchain = append(Blockchain, *genesisBlock)
 
-	newBlock, err := NewBlock("Alice to Bob", 1, Blockchain[len(Blockchain)-1].CurrentHash)
+	newBlock, err := NewBlock("Ashish to Uzair", 1, Blockchain[len(Blockchain)-1].CurrentHash)
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
@@ -94,7 +98,7 @@ func main() {
 	DisplayBlocks()
 
 	fmt.Println("Changing block transaction...")
-	err = ChangeBlock(&Blockchain[1], "Charlie to David")
+	err = ChangeBlock(&Blockchain[1], "Harris to Hamda")
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
