@@ -80,7 +80,7 @@ func CalculateHash(stringToHash string) string {
 }
 
 func main() {
-	// Example usage of the functions
+
 	genesisBlock, err := NewBlock("Genesis Block", 0, "")
 	if err != nil {
 		fmt.Println("Error:", err)
